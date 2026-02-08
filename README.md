@@ -9,9 +9,9 @@ Workspace is a lightweight, prefix-based Discord bot framework built on top of d
 ## Quick Start
 
     require('dotenv').config();
-    const BotClient = require('workspace');
+    const Workspace = require('workspace');
 
-    const bot = new BotClient({
+    const bot = new Workspace({
       prefix: '!',
       commandsPath: './commands',
       eventsPath: './events'
@@ -19,29 +19,7 @@ Workspace is a lightweight, prefix-based Discord bot framework built on top of d
 
     bot.start(process.env.TOKEN);
 
-## Project Structure
 
-    your-bot/
-    ├── index.js
-    ├── .env
-    ├── commands/
-    │   └── ping.js
-    ├── events/
-    │   └── ready.js
-    └── package.json
-
-## BotClient API
-
-Constructor options:
-- prefix (string)
-- commandsPath (string)
-- eventsPath (string)
-
-Methods:
-- start(token)
-- loadCommands()
-- loadEvents()
-- listenForCommands()
 
 ## License
 
